@@ -14,7 +14,7 @@ YDUPLICATE
 0.0
 
 ANGLE
--2.26093731614
+-3.11845488442
 
 INDEX
 2
@@ -42,30 +42,30 @@ YDUPLICATE
 0.0
 
 ANGLE
-1.0
+0.0
 
 INDEX
 1
 #-----------------------
 SECTION
-13.6892809936 0.0 10.74375   26.1818181818  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+13.7518444169 0.0 10.125   26.1818181818  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\S1223_TC\S1223_TC.dat"
 #-----------------------
 SECTION
-13.6892809936 33.0 10.74375   26.1818181818  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+13.7518444169 33.0 10.125   26.1818181818  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\S1223_TC\S1223_TC.dat"
 #-----------------------
 SECTION
-14.7365537208 43.56 10.74375   21.9927272727  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+14.7991171442 43.56 10.125   21.9927272727  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\S1223_TC\S1223_TC.dat"
 CONTROL
 Aileron  1.0  0.75  0. 0. 0.  -1.0 | Name  gain  Xhinge  XYZhvec  SgnDup
 #-----------------------
 SECTION
-16.9620082663 66.0 10.74375   13.0909090909  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+17.0245716897 66.0 10.125   13.0909090909  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\S1223_TC\S1223_TC.dat"
 CONTROL

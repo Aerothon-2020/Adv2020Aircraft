@@ -2,7 +2,7 @@ from __future__ import division # let 5/2 = 2.5 rather than 2
 from scalar.units import LBF, SEC, ARCDEG, FT, IN, SLUG, OZF, OZM
 from scalar.units import AsUnit
 from Aerothon.ACWing import ACMainWing
-from Aerothon.DefaultMaterialsLibrary import PinkFoam, Monokote, Basswood, Balsa, Ultracote, AluminumTube, Aluminum
+from Aerothon.DefaultMaterialsLibrary import PinkFoam, Monokote, Basswood, Balsa, Ultracote, AluminumTube, Aluminum, CarbonTube
 from Aerothon.ACWingWeight import ACSolidWing, ACRibWing
 
 #
@@ -11,9 +11,9 @@ from Aerothon.ACWingWeight import ACSolidWing, ACRibWing
 Wing = ACMainWing(1)
 Wing.b       = 132 *IN
 #Wing.V_Stall = 32.5* FT/SEC
-Wing.S       = 3024*IN**2
+Wing.S       = 3168*IN**2
 Wing.Lift_LO = 60*LBF
-Wing.Alt_LO  = 721 * FT
+Wing.Alt_LO  = 653 * FT
 Wing.V_LOstall    =  1.1
 
 ###############################################################################
@@ -31,7 +31,7 @@ Wing.FullWing = True
  #b=150,S=3200
 #===============================================================================
 Wing.TR      = [1.0,0.5] #Taper Ratio
-Wing.Fb      = [0.50,1.0] #Span Fraction
+Wing.Fb      = [0.9999,1.0] #Span Fraction
 #Wing.TR      = [1.0,0.4] #Max L/D
 #Wing.Fb      = [0.467,1] #Max L/D
 #Wing.TR      = [1.0,0.2] #Max CL
@@ -46,7 +46,7 @@ Wing.Gam     = [ 0*ARCDEG,0*ARCDEG]
 Wing.Lam     = [ 0*ARCDEG,0*ARCDEG]
 
 #Wing.SweepFc = 0.5
-#Wing.CEdge   = 'LE' #LE of wing to be tapered or constant LE
+Wing.CEdge   = 'LE' #LE of wing to be tapered or constant LE
 Wing.ConstUpper = False
 
 #
@@ -120,8 +120,8 @@ Wing.Aileron.Servo.WeightGroup = 'Controls'
 # Main Spar Material 1/8th in steel web
 # Spar material (basswood, 1/4in width at max airfoil thickness + d-spar skin, balsa 1/16in)
 #
-SparW = 1*IN
-SparH = 2*IN
+SparW = 1.07*IN
+SparH = 1.07*IN
 CapH = 1/8*IN
 WebW = 1/8*IN
 
@@ -132,7 +132,7 @@ SparLinearDensity = WebArea*Balsa.ForceDensity + CapArea*Balsa.ForceDensity
 
 Wing.SetWeightCalc(ACRibWing)
 Wing.WingWeight.AddSpar("MainSpar", SparH, SparW, (0.25,0), 1.0, False)
-Wing.WingWeight.MainSpar.SparMat = Aluminum.copy()
+Wing.WingWeight.MainSpar.SparMat = CarbonTube.copy()
 Wing.WingWeight.MainSpar.SparMat.LinearForceDensity = SparLinearDensity
 Wing.WingWeight.MainSpar.ScaleToWing = [False, False]
 Wing.WingWeight.MainSpar.WeightGroup = "MainWing"

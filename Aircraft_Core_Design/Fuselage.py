@@ -8,17 +8,17 @@ Fuselage = ACFuselage()
 #
 # Create the sections of the fuselage
 #
-Fuselage.AddSection('Nose'   , 7.5*IN, -1)
-Fuselage.AddSection('PyldBay', 22.5*IN, -1)
-Fuselage.AddSection('PyldTaper', 7.5*IN, -1)
-Fuselage.AddSection('Tail', 33*IN, 1)
+Fuselage.AddSection('Nose'   , 5*IN, -1)
+Fuselage.AddSection('PyldBay', 33*IN, -1)
+Fuselage.AddSection('PyldTaper', 8*IN, -1)
+Fuselage.AddSection('Tail', 28*IN, 1)
 
 # Size the engine fire wall
 #
 Fuselage.Nose.FrontBulk.Width  = 3.0*IN
-Fuselage.Nose.FrontBulk.Height = 3.0*IN
+Fuselage.Nose.FrontBulk.Height = 4.0*IN
 Fuselage.Nose.FrontBulk.Material = ACPlyBH.copy()
-Fuselage.Nose.Align             = 0.7
+Fuselage.Nose.Align             = 0
 Fuselage.Nose.SkinMat = Monokote.copy()
 Fuselage.Nose.StringerMat.LinearForceDensity = .001*LBF/IN
 Fuselage.Nose.FrontBulk.WeightGroup = 'Fuselage'
@@ -26,9 +26,9 @@ Fuselage.Nose.FrontBulk.WeightGroup = 'Fuselage'
 # Size the payload bay
 #
 Fuselage.PyldBay.FrontBulk.Width  = 6.0*IN
-Fuselage.PyldBay.FrontBulk.Height = 8.25*IN
+Fuselage.PyldBay.FrontBulk.Height = 8.0*IN
 Fuselage.PyldBay.BackBulk.Width   = 6.0*IN
-Fuselage.PyldBay.BackBulk.Height  = 8.25*IN
+Fuselage.PyldBay.BackBulk.Height  = 8.0*IN
 Fuselage.PyldBay.FrontBulk.Material = ACPlyBH.copy()
 Fuselage.PyldBay.BackBulk.Material  = ACPlyBH.copy()
 Fuselage.PyldBay.SkinMat = Monokote.copy()
@@ -41,9 +41,7 @@ Fuselage.PyldBay.WeightGroup = "Fuselage"
 # Change the alignment of the tail taper section
 #
 Fuselage.PyldTaper.FrontBulk.Width = 6.0*IN
-Fuselage.PyldTaper.FrontBulk.Height = 8.25*IN
-Fuselage.PyldTaper.BackBulk.Width  = 6.0*IN
-Fuselage.PyldTaper.BackBulk.Height = 3.5*IN
+Fuselage.PyldTaper.FrontBulk.Height = 8.0*IN
 Fuselage.PyldTaper.BackBulk.Material = ACPlyBH.copy()
 Fuselage.PyldTaper.Align       = 1
 Fuselage.PyldTaper.SkinMat     = Monokote.copy()
@@ -53,10 +51,12 @@ Fuselage.PyldTaper.BackBulk.WeightGroup = 'Fuselage'
 Fuselage.PyldTaper.WeightGroup = "Fuselage"
 #
 #
-Fuselage.Tail.BackBulk.Width  = 6.0*IN
-Fuselage.Tail.BackBulk.Height = 1.75*IN
+Fuselage.Tail.FrontBulk.Width = 1.07*IN
+Fuselage.Tail.FrontBulk.Height = 1.07*IN
+Fuselage.Tail.BackBulk.Width  = 1.07*IN
+Fuselage.Tail.BackBulk.Height = 1.07*IN
 Fuselage.Tail.FrontBulk.Material = ACPlyBH.copy()
-Fuselage.Tail.Align             = 1
+Fuselage.Tail.Align             = 0
 Fuselage.Tail.SkinMat = Monokote.copy()
 Fuselage.Tail.StringerMat.LinearForceDensity = .001*LBF/IN
 Fuselage.Tail.BackBulk.WeightGroup = 'Fuselage'
@@ -133,7 +133,7 @@ Fuselage.XcgSecFrac = 6.66/12
 
 
 Fuselage.Payload.Width  = 5*IN
-Fuselage.Payload.Length = 8*IN
+Fuselage.Payload.Length = 20*IN
 Fuselage.Payload.Face = 'Bottom'
 Fuselage.Payload.Material = Steel.copy()
 Fuselage.Payload.Weight = 25*LBF

@@ -2,7 +2,7 @@ from __future__ import division # let 5/2 = 2.5 rather than 2
 from scalar.units import IN, LBF, SLUG, FT
 from Aerothon.ACBase import g
 from Aerothon.ACMaterial import ACMaterial
-from Aerothon.DefaultMaterialsLibrary import Steel, AircraftPly, Basswood, Monokote, Balsa, Aluminum
+from Aerothon.DefaultMaterialsLibrary import Steel, AircraftPly, Basswood, Monokote, Balsa, Aluminum, CarbonTube
 
 #
 # Materials Set-up
@@ -13,6 +13,7 @@ ACPly    = AircraftPly.copy()
 Basswood = Basswood.copy()
 Monokote = Monokote.copy() 
 Balsa    = Balsa.copy()
+CarbonTube = CarbonTube.copy()
 
 
 DivinicelFD = 0.00137 * LBF / IN**3

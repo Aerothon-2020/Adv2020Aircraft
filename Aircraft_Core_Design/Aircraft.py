@@ -22,8 +22,8 @@ Aircraft.SetPropulsion(Propulsion)
 Aircraft.SetWing(Wing)
 #
 # Position the wing on the top of the fuselage
-Aircraft.WingFuseFrac = 0.575
-Aircraft.Wing.i = 1.0*ARCDEG
+Aircraft.WingFuseFrac = 0.50
+Aircraft.Wing.i = 0*ARCDEG
 #
 # Aircraft Properties
 # Total weight is going to change
@@ -205,7 +205,7 @@ MainGear.GearHeight   = 6 * IN
 #MainGear.StrutL       = 0.2 * IN
 MainGear.StrutW       = 0.25 * IN
 MainGear.StrutH       = 0.25 * IN
-MainGear.WheelDiam    = 5 * IN    
+MainGear.WheelDiam    = 5 * IN
 MainGear.X[1]         = 6.0 * IN
 MainGear.Strut.Weight = 1.35* LBF 
 MainGear.Strut.WeightGroup = "LandingGear"
@@ -250,7 +250,7 @@ if __name__ == '__main__':
     #print 'Empty Weight   : ', AsUnit( Aircraft.EmptyWeight,     'lbs')
  
     Aircraft.Draw()
-    Aircraft.WriteAVLAircraft('AVLAircraft.avl') 
+    Aircraft.WriteAVLAircraft('AVLAircraft.avl')
     
     Wing.WingWeight.DrawDetail = True 
       
