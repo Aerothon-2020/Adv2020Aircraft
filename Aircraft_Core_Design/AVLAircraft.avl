@@ -1,8 +1,8 @@
 AdvAeroCats_2020
 0.0			| Mach
 0 0 0.0		| iYsym  iZsym  Zsym
-3024.0 23.6883116883 132.0		| Sref   Cref   Bref
-22.330019685 0.0 10.125		| Xref   Yref   Zref
+3168.0 24.0000072 132.0		| Sref   Cref   Bref
+25.657519685 0.0 13.0		| Xref   Yref   Zref
 0.0			| CDp  (optional)
 #==============================================================
 #
@@ -14,20 +14,20 @@ YDUPLICATE
 0.0
 
 ANGLE
--3.11845488442
+-4.8328109193
 
 INDEX
 2
 #-----------------------
 SECTION
-66.9728768279 0.0 13.375   11.4285714286  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+70.3003768279 0.0 16.465   11.4285714286  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\NACA0012\NACA0012.dat"
 CONTROL
 Elevator  1.0  0.5  0. 0. 0.  1.0 | Name  gain  Xhinge  XYZhvec  SgnDup
 #-----------------------
 SECTION
-66.9728768279 21.0 13.375   11.4285714286  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+70.3003768279 21.0 16.465   11.4285714286  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\NACA0012\NACA0012.dat"
 CONTROL
@@ -48,24 +48,26 @@ INDEX
 1
 #-----------------------
 SECTION
-13.7518444169 0.0 10.125   26.1818181818  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+18.2349720329 0.0 13.0   24.0000360001  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\S1223_TC\S1223_TC.dat"
 #-----------------------
 SECTION
-13.7518444169 33.0 10.125   26.1818181818  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
-AFIL
-"..\..\Airfoils\S1223_TC\S1223_TC.dat"
-#-----------------------
-SECTION
-14.7991171442 43.56 10.125   21.9927272727  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+18.2349720329 43.56 13.0   24.0000360001  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\S1223_TC\S1223_TC.dat"
 CONTROL
 Aileron  1.0  0.75  0. 0. 0.  -1.0 | Name  gain  Xhinge  XYZhvec  SgnDup
 #-----------------------
 SECTION
-17.0245716897 66.0 10.125   13.0909090909  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+18.2349720329 65.99934 13.0   24.0000360001  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+AFIL
+"..\..\Airfoils\S1223_TC\S1223_TC.dat"
+CONTROL
+Aileron  1.0  0.75  0. 0. 0.  -1.0 | Name  gain  Xhinge  XYZhvec  SgnDup
+#-----------------------
+SECTION
+20.0349747329 66.0 13.0   16.8000252  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\S1223_TC\S1223_TC.dat"
 CONTROL
@@ -83,14 +85,14 @@ INDEX
 3
 #-----------------------
 SECTION
-66.830019685 0.0 14.25   12.0  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+70.157519685 0.0 17.0   12.0  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\NACA0012\NACA0012.dat"
 CONTROL
 Rudder  1.0  0.5  0. 0. 0.  -1.0 | Name  gain  Xhinge  XYZhvec  SgnDup
 #-----------------------
 SECTION
-69.830019685 0.0 34.25   9.0  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+73.157519685 0.0 37.0   9.0  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\NACA0012\NACA0012.dat"
 CONTROL

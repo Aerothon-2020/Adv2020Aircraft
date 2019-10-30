@@ -1,7 +1,7 @@
 ACMainWing
 0.0				| Mach
 0 0 0.0			| iYsym  iZsym  Zsym
-3168.0 24.000199995 132.0			| Sref   Cref   Bref
+3168.0 24.0000072 132.0			| Sref   Cref   Bref
 0.0 0.0 0.0			| Xref   Yref   Zref
 0.0				| CDp  (optional)
 #==============================================================
@@ -20,26 +20,26 @@ INDEX
 1
 #-----------------------
 SECTION
--6.00015000375 0.0 0.0   24.000600015  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+-6.00000900001 0.0 0.0   24.0000360001  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\S1223_TC\S1223_TC.dat"
 #-----------------------
 SECTION
--6.00015000375 43.56 0.0   24.000600015  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
-AFIL
-"..\..\Airfoils\S1223_TC\S1223_TC.dat"
-CONTROL
-Aileron  1.0  0.75  0. 0. 0.  -1.0 | Name  gain  Xhinge  XYZhvec  SgnDup
-#-----------------------
-SECTION
--6.00015000375 65.9934 0.0   24.000600015  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+-6.00000900001 43.56 0.0   24.0000360001  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\S1223_TC\S1223_TC.dat"
 CONTROL
 Aileron  1.0  0.75  0. 0. 0.  -1.0 | Name  gain  Xhinge  XYZhvec  SgnDup
 #-----------------------
 SECTION
--6.00015000375 66.0 0.0   12.0003000075  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+-6.00000900001 65.99934 0.0   24.0000360001  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
+AFIL
+"..\..\Airfoils\S1223_TC\S1223_TC.dat"
+CONTROL
+Aileron  1.0  0.75  0. 0. 0.  -1.0 | Name  gain  Xhinge  XYZhvec  SgnDup
+#-----------------------
+SECTION
+-4.20000630001 66.0 0.0   16.8000252  0 0 0 | Xle Yle Zle   Chord   Ainc   [ Nspan Sspace ]
 AFIL
 "..\..\Airfoils\S1223_TC\S1223_TC.dat"
 CONTROL

@@ -2,7 +2,8 @@ from __future__ import division # let 5/2 = 2.5 rather than 2
 from scalar.units import IN, LBF
 from scalar.units import AsUnit
 from Aerothon.ACFuselage import ACFuselage
-from Advanced_2020_Aircraft.Structures.Materials import ACPlyBH, Monokote, Steel
+from Aerothon.DefaultMaterialsLibrary import PinkFoam, Monokote, Basswood, Balsa, Ultracote, AluminumTube, Aluminum, CarbonTube
+from Adv2020Aircraft.Structures.Materials import ACPlyBH, Monokote, Steel, CarbonTube
 
 Fuselage = ACFuselage()
 #
@@ -11,7 +12,7 @@ Fuselage = ACFuselage()
 Fuselage.AddSection('Nose'   , 5*IN, -1)
 Fuselage.AddSection('PyldBay', 33*IN, -1)
 Fuselage.AddSection('PyldTaper', 8*IN, -1)
-Fuselage.AddSection('Tail', 28*IN, 1)
+Fuselage.AddSection('Tail', 26*IN, 1)
 
 # Size the engine fire wall
 #
@@ -55,7 +56,7 @@ Fuselage.Tail.FrontBulk.Width = 1.07*IN
 Fuselage.Tail.FrontBulk.Height = 1.07*IN
 Fuselage.Tail.BackBulk.Width  = 1.07*IN
 Fuselage.Tail.BackBulk.Height = 1.07*IN
-Fuselage.Tail.FrontBulk.Material = ACPlyBH.copy()
+Fuselage.Tail.FrontBulk.Material = CarbonTail.copy()
 Fuselage.Tail.Align             = 0
 Fuselage.Tail.SkinMat = Monokote.copy()
 Fuselage.Tail.StringerMat.LinearForceDensity = .001*LBF/IN

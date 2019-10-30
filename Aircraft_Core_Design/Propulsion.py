@@ -4,10 +4,10 @@ from __future__ import division # let 5/2 = 2.5 rather than 2
 
 from Aerothon.ACPropulsion import ACPropulsion
 
-from Advanced_2020_Aircraft.Hardware.Motors.Hacker_A50_14L import Motor
-from Advanced_2020_Aircraft.Hardware.Propellers.APC_20x8E import Prop
-from Advanced_2020_Aircraft.Hardware.Batteries.Turnigy_6Cell_3000 import Turnigy_6Cell_3000 as Battery
-from Advanced_2020_Aircraft.Hardware.SpeedControllers.Phoenix import Phoenix100
+from Adv2020Aircraft.Hardware.Motors.Hacker_A50_14L import Motor
+from Adv2020Aircraft.Hardware.Propellers.APC_20x8E import Prop
+from Adv2020Aircraft.Hardware.Batteries.Turnigy_6Cell_3000 import Turnigy_6Cell_3000 as Battery
+from Adv2020Aircraft.Hardware.SpeedControllers.Phoenix import Phoenix100
 
 import numpy as npy
 import cmath as math
@@ -30,7 +30,7 @@ Vmax = 50
 
 # Set Propulsion properties
 Propulsion = ACPropulsion(Prop,Motor)
-Propulsion.Alt  = 0*FT
+Propulsion.Alt  = 650*FT
 Propulsion.Vmax = Vmax*FT/SEC
 Propulsion.nV   = 30
 

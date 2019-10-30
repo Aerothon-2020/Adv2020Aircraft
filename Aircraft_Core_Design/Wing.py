@@ -30,8 +30,8 @@ Wing.FullWing = True
 #===============================================================================
  #b=150,S=3200
 #===============================================================================
-Wing.TR      = [1.0,0.5] #Taper Ratio
-Wing.Fb      = [0.9999,1.0] #Span Fraction
+Wing.TR      = [1.0,0.7] #Taper Ratio
+Wing.Fb      = [0.99999,1.0] #Span Fraction
 #Wing.TR      = [1.0,0.4] #Max L/D
 #Wing.Fb      = [0.467,1] #Max L/D
 #Wing.TR      = [1.0,0.2] #Max CL
@@ -46,7 +46,7 @@ Wing.Gam     = [ 0*ARCDEG,0*ARCDEG]
 Wing.Lam     = [ 0*ARCDEG,0*ARCDEG]
 
 #Wing.SweepFc = 0.5
-Wing.CEdge   = 'LE' #LE of wing to be tapered or constant LE
+#Wing.CEdge   = 'LE' #LE of wing to be tapered or constant LE
 Wing.ConstUpper = False
 
 #
@@ -143,12 +143,12 @@ Wing.WingWeight.SecondSpar.SparMat = Balsa.copy()
 Wing.WingWeight.SecondSpar.ScaleToWing = [False, False]
 Wing.WingWeight.SecondSpar.WeightGroup = "MainWing"
 
-Wing.WingWeight.AddSpar("ThirdSpar", 1/2*IN, 1/2*IN, (0.5,-0.01),1.0, False)
-Wing.WingWeight.ThirdSpar.SparMat = Balsa.copy()
-Wing.WingWeight.ThirdSpar.ScaleToWing = [False, False]
-Wing.WingWeight.ThirdSpar.WeightGroup = "MainWing"
+#Wing.WingWeight.AddSpar("ThirdSpar", 1/2*IN, 1/2*IN, (0.5,-0.01),1.0, False)
+#Wing.WingWeight.ThirdSpar.SparMat = Balsa.copy()
+#Wing.WingWeight.ThirdSpar.ScaleToWing = [False, False]
+#Wing.WingWeight.ThirdSpar.WeightGroup = "MainWing"
 
-Wing.WingWeight.AddSpar("TrailingEdge", 1/4*IN, 1*IN, (0.975,0.0), 0.5, False)
+Wing.WingWeight.AddSpar("TrailingEdge", 1/4*IN, 1*IN, (0.975,0.0), 0.66, False)
 Wing.WingWeight.TrailingEdge.SparMat = Balsa.copy()
 Wing.WingWeight.TrailingEdge.ScaleToWing = [False, False]
 Wing.WingWeight.TrailingEdge.WeightGroup = "MainWing"
@@ -158,17 +158,17 @@ Wing.WingWeight.LeadingEdge.SparMat= Balsa.copy()
 Wing.WingWeight.LeadingEdge.ScaleToWing = [False, False]
 Wing.WingWeight.LeadingEdge.WeightGroup = "MainWing"
 
-Wing.WingWeight.AddSpar("LeadingEdgeBent1", 1/32*IN, 2.5*IN, (0.066,-0.8), 1.0, False)
-Wing.WingWeight.LeadingEdgeBent1.SparMat = Balsa.copy()
-Wing.WingWeight.LeadingEdgeBent1.ScaleToWing = [False,False]
-Wing.WingWeight.LeadingEdgeBent1.WeightGroup = "MainWing"
+#Wing.WingWeight.AddSpar("LeadingEdgeBent1", 1/32*IN, 2.5*IN, (0.066,-0.8), 1.0, False)
+#Wing.WingWeight.LeadingEdgeBent1.SparMat = Balsa.copy()
+#Wing.WingWeight.LeadingEdgeBent1.ScaleToWing = [False,False]
+#Wing.WingWeight.LeadingEdgeBent1.WeightGroup = "MainWing"
 
-Wing.WingWeight.AddSpar("LeadingEdgeBent2", 1/32*IN, 3.5*IN, (0.08, -0.3), 1.0, False)
-Wing.WingWeight.LeadingEdgeBent2.SparMat = Balsa.copy()
-Wing.WingWeight.LeadingEdgeBent2.ScaleToWing = [False,False]
-Wing.WingWeight.LeadingEdgeBent2.WeightGroup = "MainWing"
+#Wing.WingWeight.AddSpar("LeadingEdgeBent2", 1/32*IN, 3.5*IN, (0.08, -0.3), 1.0, False)
+#Wing.WingWeight.LeadingEdgeBent2.SparMat = Balsa.copy()
+#Wing.WingWeight.LeadingEdgeBent2.ScaleToWing = [False,False]
+#Wing.WingWeight.LeadingEdgeBent2.WeightGroup = "MainWing"
 
-#Wing.WingWeight.AddSpar("TrailingEdge1", 1/32*IN, 3*IN, (0,1), 1.0, False)
+#Wing.WingWeight.AddSpar("TrailingEdge1", 1/32*IN, 3*IN, (0,1), 1, False)
 #Wing.WingWeight.TrailingEdge1.SparMat = Balsa.copy()
 #Wing.WingWeight.TrailingEdge1.Position = (0.94,-0.1)
 #Wing.WingWeight.TrailingEdge1.ScaleToWing = [False,False]
@@ -227,7 +227,7 @@ if __name__ == '__main__':
     Wing.WingWeight.DrawRibs = False
     Wing.WingWeight.DrawDetail = True
     Wing.WingWeight.Draw(fig = 1)
-#    Wing.WriteAVLAircraft('AVLWing_Latest.avl') 
+    #Wing.WriteAVLAircraft('AVLWing_Latest.avl')
     
     Wing.Draw(fig = 1)
     pyl.show()

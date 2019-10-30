@@ -6,9 +6,9 @@ from scalar.units import AsUnit
 from Aerothon.ACAircraft import ACTailAircraft
 from Aerothon.ACWingWeight import ACRibWing
 from Aerothon.DefaultMaterialsLibrary import Basswood, Steel, Balsa, Aluminum, Ultracote
-from Advanced_2020_Aircraft.Aircraft_Core_Design.Fuselage import Fuselage
-from Advanced_2020_Aircraft.Aircraft_Core_Design.Propulsion import Propulsion
-from Advanced_2020_Aircraft.Aircraft_Core_Design.Wing import Wing
+from Adv2020Aircraft.Aircraft_Core_Design.Fuselage import Fuselage
+from Adv2020Aircraft.Aircraft_Core_Design.Propulsion import Propulsion
+from Adv2020Aircraft.Aircraft_Core_Design.Wing import Wing
 import pylab as pyl
 
 #
@@ -29,7 +29,8 @@ Aircraft.Wing.i = 0*ARCDEG
 # Total weight is going to change
 Aircraft.TotalWeight = 50*LBF 
 # Engine align
-Aircraft.EngineAlign = 0.7
+Aircraft.EngineAlign = 0
+
 
 Aircraft.TippingAngle     = 15*ARCDEG # Black line on AC plot
 Aircraft.RotationAngle    = 12*ARCDEG  # Red line on AC plot
@@ -41,7 +42,7 @@ Aircraft.CLHTSlopeAt = (0 * ARCDEG, 15 * ARCDEG)
 Aircraft.DWSlopeAt   = (0 * ARCDEG, 15 * ARCDEG)
 
 Aircraft.Alpha_Zero_CM  = 3.0 * ARCDEG   #for steady level flight
-Aircraft.StaticMargin   = 0.06 # Location of Wing           
+Aircraft.StaticMargin   = 0.06 # Location of Wing
 Aircraft.WingXMaxIt = 50
 Aircraft.WingXOmega = 1
 #
@@ -51,7 +52,7 @@ Aircraft.VmaxPlt = 75*FT/SEC
 # Estimate for the time the aircraft rotates on the ground during takeoff
 Aircraft.RotationTime = 0.5 * SEC
 
-Aircraft.NoseGearOffset = 7.5*IN
+Aircraft.NoseGearOffset = 5*IN
 ###############################################################################
 #
 # Tail surfaces
@@ -201,7 +202,7 @@ Aluminum = Aluminum.copy()
 Steel    = Steel.copy()
 MainGear = Aircraft.MainGear
 #MainGear.Theta        = 60 * ARCDEG
-MainGear.GearHeight   = 6 * IN
+MainGear.GearHeight   = 9 * IN
 #MainGear.StrutL       = 0.2 * IN
 MainGear.StrutW       = 0.25 * IN
 MainGear.StrutH       = 0.25 * IN
