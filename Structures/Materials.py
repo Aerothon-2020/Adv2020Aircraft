@@ -82,7 +82,19 @@ cutout = 0.33
 CarbonTail = ACMaterial()
 CarbonTail.Width = 1.07*IN
 CarbonTail.Thickness = 0.12*IN
-CarbonTail.LinearForceDensity = CarbonTube.LinearForceDensity*(1-cutout)
+
+'''
+MEW - Fake number, just trying. 
+Fuselage works with this. Recommend finding a real density number for carbon fiber and using that...
+
+Then do exaclty what you were doing with cutout... where the thickness and width are equivalent to one another (because circle)
+and subtract the cutout portion from the density. There will be some error because Aerothon seems to be assuming that 
+you're using a square and you'll go ahead and cut some stuff out... but as long as you get the proportions correct it should
+be fine from a weight standpoint... does that make sense?
+
+As of now I'm not sure that Aerothon can handle circles... I'll email Marshall
+'''
+CarbonTail.ForceDensity = 0.068 * LBF/FT**3  # FAKE NUMBER GO FIND A REAL ONE
 
 
 
@@ -111,3 +123,7 @@ UDsparFD = Balsa.ForceDensity * 0.0625*IN * 2.0*UWthick
 stringers = 0.125*IN   #kind of a fudge factor
 BWRibMat = Balsa.copy()
 BWRibMat.Thickness = 0.125*IN #+ stringers #changed by Matt Finke
+
+
+if __name__ == '__main__':
+    pass
