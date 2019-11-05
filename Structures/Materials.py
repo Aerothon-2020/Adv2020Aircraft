@@ -78,11 +78,9 @@ BalsaStringer.Width = 0.25*IN
 BalsaStringer.Thickness = 0.25*IN
 BalsaStringer.ForceDensity = Balsa.ForceDensity
 
-cutout = 0.33
 CarbonTail = ACMaterial()
-CarbonTail.Width = 1.07*IN
 CarbonTail.Thickness = 0.12*IN
-CarbonTail.LinearForceDensity = CarbonTube.LinearForceDensity*(1-cutout)
+CarbonTail.LinearForceDensity = CarbonTube.LinearForceDensity
 
 
 
