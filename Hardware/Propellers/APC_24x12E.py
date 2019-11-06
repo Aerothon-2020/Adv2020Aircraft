@@ -42,8 +42,7 @@ Prop.ThrustData = [(5520 * RPM, 176 * OZF * STD),
                    (4590 * RPM, 116 * OZF * STD),
                    (4110 * RPM, 91 * OZF * STD),
                    (3540 * RPM, 66 * OZF * STD),
-                   (5862 * RPM,
-                    187 * OZF * STD2)]  # this point taken after initial points on Hacker A50. Used to verify good data.
+                   (5862 * RPM, 187 * OZF * STD2)]  # this point taken after initial points on Hacker A50. Used to verify good data.
 
 Arm = 19.5 * IN * STD
 Arm3 = 19.5 * IN * STD3  # Took torque data in closet with known prop to observe difference between temp

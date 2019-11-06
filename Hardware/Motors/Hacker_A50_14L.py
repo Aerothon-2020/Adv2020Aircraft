@@ -38,7 +38,7 @@ Motor.LenDi = [46.8*MM, 59.98*MM]
 # This data has been corrected for standard day
 STD = STDCorrection( 29.9*inHg, (23.9  +273.15)*K )
 Arm=19.5*IN
-#            RPM,        Torque     Current   Voltage
+#               RPM,          Torque           Current    Voltage
 TestData = [(6210  *RPM, (7.5*Arm*OZF)*STD,    34.8*A,    23.0*V),
             (5910  *RPM, (8.7*Arm*OZF)*STD,    39.0*A,    21.9*V),
             (5610  *RPM, (9.9*Arm*OZF)*STD,    44.2*A,    21.5*V),

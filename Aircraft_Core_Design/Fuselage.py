@@ -3,7 +3,7 @@ from scalar.units import IN, LBF
 from scalar.units import AsUnit
 from Aerothon.ACFuselage import ACFuselage
 from Aerothon.DefaultMaterialsLibrary import PinkFoam, Monokote, Basswood, Balsa, Ultracote, AluminumTube, Aluminum, CarbonTube
-from Adv2020Aircraft.Structures.Materials import ACPlyBH, Monokote, Steel, CarbonTube
+from Adv2020Aircraft.Structures.Materials import ACPlyBH, Monokote, Steel, CarbonTail
 
 Fuselage = ACFuselage()
 #
@@ -19,7 +19,7 @@ Fuselage.AddSection('Tail', 26*IN, 1)
 Fuselage.Nose.FrontBulk.Width  = 3.0*IN
 Fuselage.Nose.FrontBulk.Height = 4.0*IN
 Fuselage.Nose.FrontBulk.Material = ACPlyBH.copy()
-Fuselage.Nose.Align             = 0
+Fuselage.Nose.Align             = 1
 Fuselage.Nose.SkinMat = Monokote.copy()
 Fuselage.Nose.StringerMat.LinearForceDensity = .001*LBF/IN
 Fuselage.Nose.FrontBulk.WeightGroup = 'Fuselage'
@@ -58,8 +58,8 @@ Fuselage.Tail.BackBulk.Width  = 1.07*IN
 Fuselage.Tail.BackBulk.Height = 1.07*IN
 Fuselage.Tail.FrontBulk.Material = CarbonTail.copy()
 Fuselage.Tail.Align             = 0
-Fuselage.Tail.SkinMat = Monokote.copy()
-Fuselage.Tail.StringerMat.LinearForceDensity = .001*LBF/IN
+#Fuselage.Tail.SkinMat = Monokote.copy()
+#Fuselage.Tail.StringerMat.LinearForceDensity = .001*LBF/IN
 Fuselage.Tail.BackBulk.WeightGroup = 'Fuselage'
 Fuselage.Tail.FrontBulk.WeightGroup = 'Fuselage'
 #
