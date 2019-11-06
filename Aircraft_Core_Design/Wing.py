@@ -138,8 +138,8 @@ Wing.WingWeight.MainSpar.ScaleToWing = [False, False]
 Wing.WingWeight.MainSpar.WeightGroup = "MainWing"
 Wing.WingWeight.SkinMat = Ultracote.copy()
 
-Wing.WingWeight.AddSpar("SecondSpar", 1/2*IN, 1/2*IN, (0.75,-0.01),1.0, False)
-Wing.WingWeight.SecondSpar.SparMat = Balsa.copy()
+Wing.WingWeight.AddSpar("SecondSpar", 0.6*IN, 0.6*IN, (0.66,-0.01),0.75, False)
+Wing.WingWeight.SecondSpar.SparMat = CarbonTube.copy()
 Wing.WingWeight.SecondSpar.ScaleToWing = [False, False]
 Wing.WingWeight.SecondSpar.WeightGroup = "MainWing"
 
@@ -153,7 +153,7 @@ Wing.WingWeight.TrailingEdge.SparMat = Balsa.copy()
 Wing.WingWeight.TrailingEdge.ScaleToWing = [False, False]
 Wing.WingWeight.TrailingEdge.WeightGroup = "MainWing"
 
-Wing.WingWeight.AddSpar("LeadingEdge",1/4*IN, 1/4*IN, (0.01,0), 1.0, False)
+Wing.WingWeight.AddSpar("LeadingEdge",1/4*IN, 1/4*IN, (0,0), 1.0, False)
 Wing.WingWeight.LeadingEdge.SparMat= Balsa.copy()
 Wing.WingWeight.LeadingEdge.ScaleToWing = [False, False]
 Wing.WingWeight.LeadingEdge.WeightGroup = "MainWing"

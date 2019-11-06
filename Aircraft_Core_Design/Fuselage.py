@@ -19,7 +19,7 @@ Fuselage.AddSection('Tail', 26*IN, 1)
 Fuselage.Nose.FrontBulk.Width  = 3.0*IN
 Fuselage.Nose.FrontBulk.Height = 4.0*IN
 Fuselage.Nose.FrontBulk.Material = ACPlyBH.copy()
-Fuselage.Nose.Align             = 0
+Fuselage.Nose.Align             = 1
 Fuselage.Nose.SkinMat = Monokote.copy()
 Fuselage.Nose.StringerMat.LinearForceDensity = .001*LBF/IN
 Fuselage.Nose.FrontBulk.WeightGroup = 'Fuselage'

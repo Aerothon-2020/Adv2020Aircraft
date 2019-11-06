@@ -5,7 +5,7 @@ from scalar.units import FT, IN, ARCDEG, LBF, SEC, OZF, OZM
 from scalar.units import AsUnit
 from Aerothon.ACAircraft import ACTailAircraft
 from Aerothon.ACWingWeight import ACRibWing
-from Aerothon.DefaultMaterialsLibrary import Basswood, Steel, Balsa, Aluminum, Ultracote
+from Aerothon.DefaultMaterialsLibrary import Basswood, Steel, Balsa, Aluminum, Ultracote, CarbonBar
 from Adv2020Aircraft.Aircraft_Core_Design.Fuselage import Fuselage
 from Adv2020Aircraft.Aircraft_Core_Design.Propulsion import Propulsion
 from Adv2020Aircraft.Aircraft_Core_Design.Wing import Wing
@@ -202,24 +202,24 @@ Aluminum = Aluminum.copy()
 Steel    = Steel.copy()
 MainGear = Aircraft.MainGear
 #MainGear.Theta        = 60 * ARCDEG
-MainGear.GearHeight   = 9 * IN
+MainGear.GearHeight   = 8.0 * IN
 #MainGear.StrutL       = 0.2 * IN
 MainGear.StrutW       = 0.25 * IN
 MainGear.StrutH       = 0.25 * IN
-MainGear.WheelDiam    = 5 * IN
-MainGear.X[1]         = 6.0 * IN
-MainGear.Strut.Weight = 1.35* LBF 
+MainGear.WheelDiam    = 5.0 * IN
+MainGear.X[1]         = 7.55 * IN
+MainGear.Strut.Weight = 10* OZF
 MainGear.Strut.WeightGroup = "LandingGear"
-MainGear.Wheel.Weight = 0.2*LBF 
+MainGear.Wheel.Weight = 0*LBF
 MainGear.Wheel.WeightGroup = "LandingGear"
 
 NoseGear = Aircraft.NoseGear
 NoseGear.StrutW    = 0.1 * IN
 NoseGear.StrutH    = 0.1 * IN
-NoseGear.WheelDiam = 5 * IN
+NoseGear.WheelDiam = 5.0 * IN
 NoseGear.Strut.Weight = 1 * LBF 
 NoseGear.Strut.WeightGroup = "LandingGear"
-NoseGear.Wheel.Weight = .2*LBF
+NoseGear.Wheel.Weight = .5*OZF
 NoseGear.Wheel.WeightGroup = "LandingGear"
 
 
