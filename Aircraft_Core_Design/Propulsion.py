@@ -5,8 +5,8 @@ from __future__ import division # let 5/2 = 2.5 rather than 2
 from Aerothon.ACPropulsion import ACPropulsion
 
 from Adv2020Aircraft.Hardware.Motors.Hacker_A50_14L import Motor
-from Adv2020Aircraft.Hardware.Propellers.APC_24x12E import Prop
-from Adv2020Aircraft.Hardware.Batteries.Turnigy_6Cell_3000 import Turnigy_6Cell_3000 as Battery
+from Adv2020Aircraft.Hardware.Propellers.APC_18x8E import Prop
+from Adv2020Aircraft.Hardware.Batteries.Turnigy_6Cell_3300 import Turnigy_6Cell_3300 as Battery
 from Adv2020Aircraft.Hardware.SpeedControllers.Phoenix import Phoenix100
 
 import numpy as npy

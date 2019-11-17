@@ -138,7 +138,7 @@ Wing.WingWeight.MainSpar.ScaleToWing = [False, False]
 Wing.WingWeight.MainSpar.WeightGroup = "MainWing"
 Wing.WingWeight.SkinMat = Ultracote.copy()
 
-Wing.WingWeight.AddSpar("SecondSpar", 0.6*IN, 0.6*IN, (0.66,-0.01),0.75, False)
+Wing.WingWeight.AddSpar("SecondSpar", 0.6*IN, 0.6*IN, (0.66,-0.01),0.25, False)
 Wing.WingWeight.SecondSpar.SparMat = CarbonTube.copy()
 Wing.WingWeight.SecondSpar.ScaleToWing = [False, False]
 Wing.WingWeight.SecondSpar.WeightGroup = "MainWing"

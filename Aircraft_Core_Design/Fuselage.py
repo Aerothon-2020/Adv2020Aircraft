@@ -12,7 +12,7 @@ Fuselage = ACFuselage()
 Fuselage.AddSection('Nose'   , 5*IN, -1)
 Fuselage.AddSection('PyldBay', 33*IN, -1)
 Fuselage.AddSection('PyldTaper', 8*IN, -1)
-Fuselage.AddSection('Tail', 26*IN, 1)
+Fuselage.AddSection('Tail', 28*IN, 1)
 
 # Size the engine fire wall
 #
@@ -87,6 +87,9 @@ Fuselage.PyldBay.AddComponent    ("GPS"           , 0.17*LBF, (0.5*IN,2.5*IN,2.5
 Fuselage.PyldBay.AddComponent    ("Reciever"      , 0.03*LBF, (1.0*IN,0.5*IN,2.0*IN), "Top", (0.2, 0.75, 0.0))
 Fuselage.PyldBay.AddComponent    ("TelemetryRcv"  , 0.11*LBF, (4.8*IN,1.5*IN,1.0*IN), "Front", (0.0, 0.5, 0.5))
 #Fuselage.PyldBay.AddComponent    ("DropServo"     , 0.05*LBF, (), "Bottom", ())
+#Fuselage.PyldBay.AddComponent    ("StaPayload"  , 8*LBF, (6*IN,1*IN,1*IN), "Left", (0.548, 0.5, 0.767))
+#Fuselage.PyldBay.AddComponent    ("StPayload"  , 10*LBF, (1*IN,5*IN,1*IN), "Right", (0.66, 0.5, 0.5))
+
 #
 Fuselage.PyldBay.PixHawk.WeightGroup = "Controller"
 Fuselage.PyldBay.PowerDist.WeightGroup = "Controller"
@@ -133,11 +136,11 @@ Fuselage.XcgSection = Fuselage.PyldBay
 Fuselage.XcgSecFrac = 6.66/12
 
 
-Fuselage.Payload.Width  = 5*IN
-Fuselage.Payload.Length = 20*IN
+Fuselage.Payload.Width  = 1*IN
+Fuselage.Payload.Length = 1*IN
 Fuselage.Payload.Face = 'Bottom'
 Fuselage.Payload.Material = Steel.copy()
-Fuselage.Payload.Weight = 25*LBF
+Fuselage.Payload.Weight = 10*LBF
 
 #
 # Determine which bulkhead should be set by the horizontal tail
