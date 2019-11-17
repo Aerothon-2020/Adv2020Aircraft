@@ -27,7 +27,7 @@ Aircraft.Wing.i = 0*ARCDEG
 #
 # Aircraft Properties
 # Total weight is going to change
-Aircraft.TotalWeight = 50*LBF 
+Aircraft.TotalWeight = 54*LBF
 # Engine align
 Aircraft.EngineAlign = 0
 
@@ -69,7 +69,7 @@ HTail.b        = 42 *IN
 HTail.TR       = 1.0
 HTail.o_eff    = 0.96
 HTail.S        = 480 *IN**2
-HTail.L        = 47.5 *IN  #Length from X_CG to Tail AC
+HTail.L        = 49.5 *IN  #Length from X_CG to Tail AC
 #HTail.VC       = 0.70  # 0.8 for S1223 airfoil
 HTail.FullWing = True
 HTail.DWF      = 1    #Main wing Down wash factor (Typically between 1.0 (close to wing) and 2.0 (far away))

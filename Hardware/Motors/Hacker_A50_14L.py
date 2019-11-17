@@ -7,13 +7,13 @@ import cmath as math
 from scalar.units import MM, IN, OZF, RPM, HP, V, A, OHM, GRAM, gacc, mAh, W, LBF, inHg, K
 from scalar.units import AsUnit
 from Aerothon.AeroUtil import STDCorrection
-from Advanced_2020_Aircraft.Hardware.Batteries.Turnigy_6Cell_3000 import Turnigy_6Cell_3000
+from Adv2020Aircraft.Hardware.Batteries.Turnigy_6Cell_3300 import Turnigy_6Cell_3300
 
 
 # Set Motor properties
 Motor  = ACMotor()
 Motor.name = 'Hacker_A50_14L'
-Motor.Battery = Turnigy_6Cell_3000
+Motor.Battery = Turnigy_6Cell_3300
 #Manufacturer Data
 # Motor.Ri  = 0.025*OHM        #Coil resistance
 # Motor.Io  = 1*A          #Idle current

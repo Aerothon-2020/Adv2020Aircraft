@@ -7,7 +7,7 @@ import cmath as math
 from scalar.units import MM, IN, OZF, RPM, HP, V, A, OHM, GRAM, gacc, mAh, W, LBF, inHg, K
 from scalar.units import AsUnit
 from Aerothon.AeroUtil import STDCorrection
-from Aircraft_Models.Reg2015Aircraft_AeroCats.Propulsion.Batteries.Turnigy_6Cell_3000 import Turnigy_6Cell_3000
+from Adv2020Aircraft.Hardware.Batteries.Turnigy_6Cell_3000 import Turnigy_6Cell_3000
 
 
 # Set Motor properties
@@ -38,7 +38,7 @@ Motor.LenDi = [46.8*MM, 59.98*MM]
 # This data has been corrected for standard day
 STD = STDCorrection( 30.2*inHg, (16.1+273.15)*K )
 Arm=19.5*IN
-#            RPM,        Torque     Current   Voltage
+#            RPM,        Torque                Current    Voltage
 TestData = [(6030  *RPM, (7.3*Arm*OZF)*STD,    32.0*A,    22.8*V),
             (5670  *RPM, (8.3*Arm*OZF)*STD,    36.0*A,    22.2*V),
             (5430  *RPM, (9.3*Arm*OZF)*STD,    39.5*A,    21.5*V),

@@ -7,22 +7,22 @@ from scalar.units import IN, LBF, SEC, ARCDEG, FT, RPM, OZF, GRAM, gacc, W, K, d
 from scalar.units import AsUnit
 
 # Set Propeller properties
-Prop = ACPropeller()
-Prop.name = 'APC 24x12E'
-Prop.D = 24 * IN
-Prop.Thickness = 0.5 * IN
+Prop             = ACPropeller()
+Prop.name        = 'APC 24x12E'
+Prop.D           = 24 * IN
+Prop.Thickness   = 0.5 * IN
 
-Prop.Pitch = 12 * IN
-Prop.dAlpha = 3.3 * ARCDEG
-Prop.Solidity = 0.0126
+Prop.Pitch       = 12 * IN
+Prop.dAlpha      = 3.3 * ARCDEG
+Prop.Solidity    = 0.0126
 
-Prop.AlphaStall = 20 * ARCDEG
+Prop.AlphaStall  = 20 * ARCDEG
 Prop.AlphaZeroCL = 0 * ARCDEG
-Prop.CLSlope = .078 / ARCDEG  # - 2D airfoil lift slope
-Prop.CDCurve = 2.2  # - 2D curvature of the airfoil drag bucket
-Prop.CDp = .02  # - Parasitic drag
+Prop.CLSlope     = .078 / ARCDEG  # - 2D airfoil lift slope
+Prop.CDCurve     = 2.2  # - 2D curvature of the airfoil drag bucket
+Prop.CDp         = .02  # - Parasitic drag
 
-Prop.Weight = 115 * GRAM * gacc
+Prop.Weight      = 150 * GRAM * gacc
 
 Prop.ThrustUnit = LBF
 Prop.ThrustUnitName = 'lbf'
@@ -35,27 +35,22 @@ Prop.MaxTipSpeed = None
 #
 # Second set of data taken - concern about first set since taken at night
 STD = STDCorrection(30.00 * inHg, (22 + 273.15) * K)
-STD2 = STDCorrection(29.63 * inHg, (21.1 + 273.15) * K)
-STD3 = STDCorrection(30.10 * inHg, (12.7 + 273.15) * K)
-Prop.ThrustData = [(5520 * RPM, 176 * OZF * STD),
-                   (5040 * RPM, 139 * OZF * STD),
-                   (4590 * RPM, 116 * OZF * STD),
-                   (4110 * RPM, 91 * OZF * STD),
-                   (3540 * RPM, 66 * OZF * STD),
-                   (5862 * RPM, 187 * OZF * STD2)]  # this point taken after initial points on Hacker A50. Used to verify good data.
 
-Arm = 19.5 * IN * STD
-Arm3 = 19.5 * IN * STD3  # Took torque data in closet with known prop to observe difference between temp
-Prop.TorqueData = [(5490 * RPM, (8.3 * Arm * OZF)),
-                   (5000 * RPM, (6.8 * Arm * OZF)),
-                   (4560 * RPM, (5.5 * Arm * OZF)),
-                   (4000 * RPM, (4.3 * Arm * OZF)),
-                   (3525 * RPM, (3.4 * Arm * OZF)),
-                   # begin 2nd taking of torque data in closet
-                   (5690 * RPM, (9.5 * Arm3 * OZF)),
-                   (5018 * RPM, (7.1 * Arm3 * OZF)),
-                   (4525 * RPM, (5.7 * Arm3 * OZF)),
-                   (4118 * RPM, (4.8 * Arm3 * OZF))]
+Prop.ThrustData = [(2489 * RPM, 143 * OZF * STD),
+                   (3754 * RPM, 3754 * OZF * STD),
+                   (4487 * RPM, 228 * OZF * STD),
+                   (4487 * RPM, 228 * OZF * STD),
+                  # (4110 * RPM, 91 * OZF * STD),
+                   #(3540 * RPM, 66 * OZF * STD),
+                   (5862 * RPM, 187 * OZF * STD)]  # this point taken after initial points on Hacker A50. Used to verify good data.
+
+Arm = 24 * IN * STD
+#Arm3 = 19.5 * IN * STD3  # Took torque data in closet with known prop to observe difference between temp
+Prop.TorqueData = [(2489 * RPM, (43*STD*OZF*IN)),
+                   (3752 * RPM, (123*STD*OZF*IN)),
+                   (4470 * RPM, (208*STD*OZF*IN)),
+                   (4668 * RPM, (237*STD*OZF*IN)),
+                   (4806 * RPM, (280*STD*OZF*IN))],
 
 ################################################################################
 if __name__ == '__main__':
@@ -72,11 +67,11 @@ if __name__ == '__main__':
     Prop.CoefPlot(Alpha, fig=1)
     Prop.PTPlot(N, V, h, 'V', fig=2)
 
-    #
-    #    N = npy.linspace(0, 13000,31)*RPM
-    #    V = npy.linspace(0,Vmax,5)*FT/SEC
-    #
-    #    Prop.PTPlot(N,V,h,'N', fig = 3)
+
+    N = npy.linspace(0, 13000,31)*RPM
+    V = npy.linspace(0,Vmax,5)*FT/SEC
+
+    Prop.PTPlot(N,V,h,'N', fig = 3)
     Prop.PlotTestData(fig=4)
 
     N = 6024 * RPM
