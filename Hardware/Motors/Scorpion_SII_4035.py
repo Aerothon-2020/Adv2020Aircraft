@@ -36,13 +36,12 @@ Motor.LenDi = [46.8 * MM, 64.9 * MM]
 #
 # This data has been corrected for standard day
 STD = STDCorrection(30.2 * inHg, (16.1 + 273.15) * K)
-Arm = 24 * IN
 #            RPM,        Torque                Current    Voltage
-TestData = [(2490 * RPM, (38.9 * IN * OZF) * STD, 7.2 * A, 24.44 * V),
-            (3743 * RPM, (119 * IN * OZF) * STD, 22.0 * A, 23.24 * V),
-            (4470 * RPM, (207.7 * IN * OZF) * STD, 38.4 * A, 22.05 * V),
-            (4661 * RPM, (246 * IN * OZF) * STD, 38.7 * A, 21.1 * V),
-            (4813 * RPM, (275.3 * IN * OZF) * STD, 50.9 * A, 21.31 * V)]  # this is actual test data from a test stand
+TestData = [(2072 * RPM, (47 * IN * OZF) * STD, 7.2 * A, 24.44 * V),
+            (2730 * RPM, (81 * IN * OZF) * STD, 22.0 * A, 23.24 * V),
+            (3182 * RPM, (132 * IN * OZF) * STD, 38.4 * A, 22.05 * V),
+            (3659 * RPM, (200 * IN * OZF) * STD, 38.7 * A, 21.1 * V),
+            (4414 * RPM, (331 * IN * OZF) * STD, 50.9 * A, 21.31 * V)]  # this is actual test data from a test stand
 1
 Motor.TestData = TestData
 
