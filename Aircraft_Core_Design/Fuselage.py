@@ -3,7 +3,7 @@ from scalar.units import IN, LBF
 from scalar.units import AsUnit
 from Aerothon.ACFuselage import ACFuselage
 from Aerothon.DefaultMaterialsLibrary import PinkFoam, Monokote, Basswood, Balsa, Ultracote, AluminumTube, Aluminum, CarbonTube
-from Adv2020Aircraft.Structures.Materials import ACPlyBH, Monokote, Steel, CarbonTail
+from Adv2020Aircraft.Structures.Materials import ACPlyBH, Monokote, Steel, CarbonTail, CarbonTube
 
 Fuselage = ACFuselage()
 #

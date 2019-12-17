@@ -251,7 +251,7 @@ if __name__ == '__main__':
     #print 'Empty Weight   : ', AsUnit( Aircraft.EmptyWeight,     'lbs')
  
     Aircraft.Draw()
-    Aircraft.WriteAVLAircraft('AVLAircraft.avl')
+    Aircraft.WriteAVLAircraft('StabilityAndControl/AVL/AVLAircraft.avl')
     
     Wing.WingWeight.DrawDetail = True 
       
