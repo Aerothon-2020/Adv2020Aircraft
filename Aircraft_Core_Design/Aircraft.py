@@ -22,7 +22,7 @@ Aircraft.SetPropulsion(Propulsion)
 Aircraft.SetWing(Wing)
 #
 # Position the wing on the top of the fuselage
-Aircraft.WingFuseFrac = 0.50
+Aircraft.WingFuseFrac = 0.3
 Aircraft.Wing.i = 0*ARCDEG
 #
 # Aircraft Properties
@@ -42,7 +42,7 @@ Aircraft.CLHTSlopeAt = (0 * ARCDEG, 15 * ARCDEG)
 Aircraft.DWSlopeAt   = (0 * ARCDEG, 15 * ARCDEG)
 
 Aircraft.Alpha_Zero_CM  = 3.0 * ARCDEG   #for steady level flight
-Aircraft.StaticMargin   = 0.06 # Location of Wing
+Aircraft.StaticMargin   = 0.05 # Location of Wing
 Aircraft.WingXMaxIt = 50
 Aircraft.WingXOmega = 1
 #
@@ -52,7 +52,7 @@ Aircraft.VmaxPlt = 75*FT/SEC
 # Estimate for the time the aircraft rotates on the ground during takeoff
 Aircraft.RotationTime = 0.5 * SEC
 
-Aircraft.NoseGearOffset = 5*IN
+Aircraft.NoseGearOffset = 9*IN
 ###############################################################################
 #
 # Tail surfaces
@@ -69,7 +69,7 @@ HTail.b        = 42 *IN
 HTail.TR       = 1.0
 HTail.o_eff    = 0.96
 HTail.S        = 480 *IN**2
-HTail.L        = 49.5 *IN  #Length from X_CG to Tail AC
+HTail.L        = 45.5 *IN  #Length from X_CG to Tail AC
 #HTail.VC       = 0.70  # 0.8 for S1223 airfoil
 HTail.FullWing = True
 HTail.DWF      = 1    #Main wing Down wash factor (Typically between 1.0 (close to wing) and 2.0 (far away))
@@ -104,7 +104,7 @@ BWRibMat.Thickness = 1/8 * IN
 
 HTail.SetWeightCalc(ACRibWing)
 HTail.WingWeight.RibMat                    = BWRibMat
-HTail.WingWeight.RibSpace                  = 6 * IN
+HTail.WingWeight.RibSpace                  = 6.04 * IN
 HTail.WingWeight.SkinMat                   = Ultracote.copy()
 HTail.WingWeight.WeightGroup = 'HTail'
 HTail.WingWeight.AddSpar("MainSpar", 1*IN, 1*IN, (0.25,0),1.0, False)
@@ -167,7 +167,7 @@ VTail.SweepFc = 1.0 #- VTail.Rudder.Fc
 # Spar taken as 1/8 inch width and thickness of the max thickness at the root
 VTail.SetWeightCalc(ACRibWing)
 VTail.WingWeight.RibMat                    = BWRibMat
-VTail.WingWeight.RibSpace                  = 5 * IN
+VTail.WingWeight.RibSpace                  = 6.04 * IN
 VTail.WingWeight.SkinMat                   = Ultracote.copy()
 VTail.WingWeight.WeightGroup = 'VTail'
 VTail.WingWeight.AddSpar("MainSpar", 1*IN, 1*IN, (0.25,0),1.0, False)
@@ -202,12 +202,12 @@ Aluminum = Aluminum.copy()
 Steel    = Steel.copy()
 MainGear = Aircraft.MainGear
 #MainGear.Theta        = 60 * ARCDEG
-MainGear.GearHeight   = 8.0 * IN
+MainGear.GearHeight   = 8.5 * IN
 #MainGear.StrutL       = 0.2 * IN
 MainGear.StrutW       = 0.25 * IN
 MainGear.StrutH       = 0.25 * IN
-MainGear.WheelDiam    = 5.0 * IN
-MainGear.X[1]         = 7.55 * IN
+MainGear.WheelDiam    = 3.5 * IN
+MainGear.X[1]         = 8.25 * IN
 MainGear.Strut.Weight = 10* OZF
 MainGear.Strut.WeightGroup = "LandingGear"
 MainGear.Wheel.Weight = 0*LBF
@@ -216,7 +216,7 @@ MainGear.Wheel.WeightGroup = "LandingGear"
 NoseGear = Aircraft.NoseGear
 NoseGear.StrutW    = 0.1 * IN
 NoseGear.StrutH    = 0.1 * IN
-NoseGear.WheelDiam = 5.0 * IN
+NoseGear.WheelDiam = 3.5 * IN
 NoseGear.Strut.Weight = 1 * LBF 
 NoseGear.Strut.WeightGroup = "LandingGear"
 NoseGear.Wheel.Weight = .5*OZF

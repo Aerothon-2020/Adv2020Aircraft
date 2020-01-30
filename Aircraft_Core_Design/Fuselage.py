@@ -9,8 +9,8 @@ Fuselage = ACFuselage()
 #
 # Create the sections of the fuselage
 #
-Fuselage.AddSection('Nose'   , 5*IN, -1)
-Fuselage.AddSection('PyldBay', 33*IN, -1)
+Fuselage.AddSection('Nose'   , 9.125*IN, -1)
+Fuselage.AddSection('PyldBay', 26*IN, -1)
 Fuselage.AddSection('PyldTaper', 8*IN, -1)
 Fuselage.AddSection('Tail', 28*IN, 1)
 
@@ -19,7 +19,7 @@ Fuselage.AddSection('Tail', 28*IN, 1)
 Fuselage.Nose.FrontBulk.Width  = 3.0*IN
 Fuselage.Nose.FrontBulk.Height = 4.0*IN
 Fuselage.Nose.FrontBulk.Material = ACPlyBH.copy()
-Fuselage.Nose.Align             = 1
+Fuselage.Nose.Align             = 0
 Fuselage.Nose.SkinMat = Monokote.copy()
 Fuselage.Nose.StringerMat.LinearForceDensity = .001*LBF/IN
 Fuselage.Nose.FrontBulk.WeightGroup = 'Fuselage'
@@ -27,9 +27,9 @@ Fuselage.Nose.FrontBulk.WeightGroup = 'Fuselage'
 # Size the payload bay
 #
 Fuselage.PyldBay.FrontBulk.Width  = 6.0*IN
-Fuselage.PyldBay.FrontBulk.Height = 8.0*IN
+Fuselage.PyldBay.FrontBulk.Height = 8.25*IN
 Fuselage.PyldBay.BackBulk.Width   = 6.0*IN
-Fuselage.PyldBay.BackBulk.Height  = 8.0*IN
+Fuselage.PyldBay.BackBulk.Height  = 8.25*IN
 Fuselage.PyldBay.FrontBulk.Material = ACPlyBH.copy()
 Fuselage.PyldBay.BackBulk.Material  = ACPlyBH.copy()
 Fuselage.PyldBay.SkinMat = Monokote.copy()
@@ -42,7 +42,9 @@ Fuselage.PyldBay.WeightGroup = "Fuselage"
 # Change the alignment of the tail taper section
 #
 Fuselage.PyldTaper.FrontBulk.Width = 6.0*IN
-Fuselage.PyldTaper.FrontBulk.Height = 8.0*IN
+Fuselage.PyldTaper.FrontBulk.Height = 8.25*IN
+Fuselage.Tail.BackBulk.Width  = 3.0*IN
+Fuselage.Tail.BackBulk.Height = 3.0*IN
 Fuselage.PyldTaper.BackBulk.Material = ACPlyBH.copy()
 Fuselage.PyldTaper.Align       = 1
 Fuselage.PyldTaper.SkinMat     = Monokote.copy()
@@ -52,10 +54,10 @@ Fuselage.PyldTaper.BackBulk.WeightGroup = 'Fuselage'
 Fuselage.PyldTaper.WeightGroup = "Fuselage"
 #
 #
-Fuselage.Tail.FrontBulk.Width = 1.07*IN
-Fuselage.Tail.FrontBulk.Height = 1.07*IN
-Fuselage.Tail.BackBulk.Width  = 1.07*IN
-Fuselage.Tail.BackBulk.Height = 1.07*IN
+Fuselage.Tail.FrontBulk.Width = 0.75*IN
+Fuselage.Tail.FrontBulk.Height = 0.75*IN
+Fuselage.Tail.BackBulk.Width  = 0.75*IN
+Fuselage.Tail.BackBulk.Height = 0.75*IN
 Fuselage.Tail.FrontBulk.Material = CarbonTail.copy()
 Fuselage.Tail.Align             = 0
 #Fuselage.Tail.SkinMat = Monokote.copy()
@@ -67,36 +69,36 @@ Fuselage.Tail.FrontBulk.WeightGroup = 'Fuselage'
 # Nose section components contain propulsion components and nose wheel steering - MH 10/19
 # Can add ballast to the nose section of the fuselage if more forward weight is needed for CG balancing - MH 10/20/13
 #
-#Fuselage.Nose.AddComponent    ("Motor",            0.85*LBF, (-2.0*IN,2*IN,2*IN),     "Front"    ,(0.0, 0.5, 0.5) )
-Fuselage.Nose.AddComponent    ("MotorBattery" ,    1.07*LBF, (5.5*IN,1.5*IN,1.5*IN) , "Back"    , (0.0, 0.5, 0.66) )
-Fuselage.Nose.AddComponent    ("NoseWheelServo",  0.05*LBF, (1.2*IN,0.5*IN,1.2*IN) , "Back"    , (0.0, 0.2, 0.25) )
-Fuselage.Nose.AddComponent    ("SpeedController", 0.27*LBF, (3.0*IN,2.0*IN,1.0*IN) , "Back"   , (0.0, 0.5, 0.85) )
+Fuselage.Nose.AddComponent    ("NoseWheelServo",  0.094*LBF, (1.2*IN,0.5*IN,1.2*IN) , "Back"    , (2.0, 0.2, 0.1) )
+Fuselage.Nose.AddComponent    ("Motor",            1.0*LBF, (2.0*IN,2*IN,2.6*IN),     "Front"    ,(0.1, 0.5, 0.5) )
+Fuselage.Nose.AddComponent    ("MotorBattery" ,    1.6*LBF, (6.1*IN,1.84*IN,1.84*IN) , "Back"    , (0.0, 0.5, 0.6) )
+Fuselage.Nose.AddComponent    ("SpeedController", 0.27*LBF, (3.0*IN,2.0*IN,1.0*IN) , "Back"   , (0.0, 0.5, 0.5) )
 #Fuselage.Nose.AddComponent    ( "Ballast"      , 0.75*LBF, (2.0*IN,1.0*IN,1.0*IN)  , "Back"    , (0.0, 0.8, 0.5) )
 #
-#Fuselage.Nose.Motor.WeightGroup = "Propulsion"
-Fuselage.Nose.MotorBattery.WeightGroup = "Propulsion"
 Fuselage.Nose.NoseWheelServo.WeightGroup = "Controls"
+Fuselage.Nose.Motor.WeightGroup = "Propulsion"
+Fuselage.Nose.MotorBattery.WeightGroup = "Propulsion"
 Fuselage.Nose.SpeedController.WeightGroup = "Propulsion"
 #Fuselage.Nose.Ballast.WeightGroup = "Ballast"
 #
 # Add Avionics and Flight Control Systems
-Fuselage.PyldBay.AddComponent    ("PixHawk"       , 0.16*LBF, (4.0*IN,1.8*IN,1.5*IN), "Front", (0.0, 0.5, 0.75))
-Fuselage.PyldBay.AddComponent    ("PowerDist"     , 0.04*LBF, (2.0*IN,0.7*IN,1.3*IN), "Top", (0.2, 0.25, 0.0))
-Fuselage.PyldBay.AddComponent    ("GPS"           , 0.17*LBF, (0.5*IN,2.5*IN,2.5*IN), "Top", (0.06, 0.5, 0.0))
+#Fuselage.PyldBay.AddComponent    ("PixHawk"       , 0.16*LBF, (4.0*IN,1.8*IN,1.5*IN), "Front", (0.0, 0.5, 0.75))
+#Fuselage.PyldBay.AddComponent    ("PowerDist"     , 0.04*LBF, (2.0*IN,0.7*IN,1.3*IN), "Top", (0.2, 0.25, 0.0))
+#Fuselage.PyldBay.AddComponent    ("GPS"           , 0.17*LBF, (0.5*IN,2.5*IN,2.5*IN), "Top", (0.06, 0.5, 0.0))
 #Fuselage.PyldBay.AddComponent    ("Battery"       , 0.16*LBF, (2.5*IN,1.5*IN,1.0*IN), "Top", ())
-Fuselage.PyldBay.AddComponent    ("Reciever"      , 0.03*LBF, (1.0*IN,0.5*IN,2.0*IN), "Top", (0.2, 0.75, 0.0))
-Fuselage.PyldBay.AddComponent    ("TelemetryRcv"  , 0.11*LBF, (4.8*IN,1.5*IN,1.0*IN), "Front", (0.0, 0.5, 0.5))
+#Fuselage.PyldBay.AddComponent    ("Reciever"      , 0.03*LBF, (1.0*IN,0.5*IN,2.0*IN), "Top", (0.2, 0.75, 0.0))
+#Fuselage.PyldBay.AddComponent    ("TelemetryRcv"  , 0.11*LBF, (4.8*IN,1.5*IN,1.0*IN), "Front", (0.0, 0.5, 0.5))
 #Fuselage.PyldBay.AddComponent    ("DropServo"     , 0.05*LBF, (), "Bottom", ())
-#Fuselage.PyldBay.AddComponent    ("StaPayload"  , 8*LBF, (6*IN,1*IN,1*IN), "Left", (0.548, 0.5, 0.767))
-#Fuselage.PyldBay.AddComponent    ("StPayload"  , 10*LBF, (1*IN,5*IN,1*IN), "Right", (0.66, 0.5, 0.5))
+##########################Fuselage.PyldBay.AddComponent    ("StaPayload"  , 8*LBF, (6*IN,1*IN,1*IN), "Left", (0.4939, 0.5, 0.727))
+#Fuselage.PyldBay.AddComponent    ("StPayload"  , 30*LBF, (1*IN,5*IN,1*IN), "Right", (0.66, 0.5, 0.5))
 
 #
-Fuselage.PyldBay.PixHawk.WeightGroup = "Controller"
-Fuselage.PyldBay.PowerDist.WeightGroup = "Controller"
-Fuselage.PyldBay.GPS.WeightGroup = "Controller"
+#Fuselage.PyldBay.PixHawk.WeightGroup = "Controller"
+#Fuselage.PyldBay.PowerDist.WeightGroup = "Controller"
+#Fuselage.PyldBay.GPS.WeightGroup = "Controller"
 #Fuselage.PyldBay.Battery.WeightGroup = "Controller"
-Fuselage.PyldBay.Reciever.WeightGroup = "Telemetry"
-Fuselage.PyldBay.TelemetryRcv.WeightGroup = "Telemetry"
+#Fuselage.PyldBay.Reciever.WeightGroup = "Telemetry"
+#Fuselage.PyldBay.TelemetryRcv.WeightGroup = "Telemetry"
 #Fuselage.PyldBay.DropServo.WeightGroup = "Controls"
 
 #
@@ -133,14 +135,14 @@ Fuselage.PyldBay.TelemetryRcv.WeightGroup = "Telemetry"
 # Define which section contains the CG of the aircraft
 #
 Fuselage.XcgSection = Fuselage.PyldBay
-Fuselage.XcgSecFrac = 6.66/12
+Fuselage.XcgSecFrac = 0.4327
 
 
-Fuselage.Payload.Width  = 1*IN
+Fuselage.Payload.Width  = 10*IN
 Fuselage.Payload.Length = 1*IN
 Fuselage.Payload.Face = 'Bottom'
 Fuselage.Payload.Material = Steel.copy()
-Fuselage.Payload.Weight = 10*LBF
+Fuselage.Payload.Weight = 0*LBF
 
 #
 # Determine which bulkhead should be set by the horizontal tail
