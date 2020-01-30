@@ -36,21 +36,20 @@ Prop.MaxTipSpeed = None
 # Second set of data taken - concern about first set since taken at night
 STD = STDCorrection(30.00 * inHg, (22 + 273.15) * K)
 
-Prop.ThrustData = [(2489 * RPM, 143 * OZF * STD),
-                   (3754 * RPM, 3754 * OZF * STD),
-                   (4487 * RPM, 228 * OZF * STD),
-                   (4487 * RPM, 228 * OZF * STD),
-                  # (4110 * RPM, 91 * OZF * STD),
-                   #(3540 * RPM, 66 * OZF * STD),
-                   (5862 * RPM, 187 * OZF * STD)]  # this point taken after initial points on Hacker A50. Used to verify good data.
+Prop.ThrustData = [(2179 * RPM, 19.28 * OZF * STD),
+                   (2459 * RPM, 91 * OZF * STD),
+                   (3124 * RPM, 147 * OZF * STD),
+                   (3505 * RPM, 187 * OZF * STD),
+                   (3693 * RPM, 205 * OZF * STD),
+                   (3952 * RPM, 235 * OZF * STD)]  # this point taken after initial points on Hacker A50. Used to verify good data.
 
-Arm = 24 * IN * STD
-#Arm3 = 19.5 * IN * STD3  # Took torque data in closet with known prop to observe difference between temp
-Prop.TorqueData = [(2489 * RPM, (43*STD*OZF*IN)),
-                   (3752 * RPM, (123*STD*OZF*IN)),
-                   (4470 * RPM, (208*STD*OZF*IN)),
-                   (4668 * RPM, (237*STD*OZF*IN)),
-                   (4806 * RPM, (280*STD*OZF*IN))],
+# Torque is calculated from motor kv and RPM
+# Took torque data in closet with known prop to observe difference between temp
+Prop.TorqueData = [(2072 * RPM, (47*STD*OZF*IN)),
+                   (2730 * RPM, (81*STD*OZF*IN)),
+                   (3182 * RPM, (132*STD*OZF*IN)),
+                   (3659 * RPM, (200*STD*OZF*IN)),
+                   (4414 * RPM, (331*STD*OZF*IN))],
 
 ################################################################################
 if __name__ == '__main__':

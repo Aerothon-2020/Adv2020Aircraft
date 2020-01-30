@@ -9,9 +9,9 @@ from Aerothon.ACWingWeight import ACSolidWing, ACRibWing
 # Create the wing
 #
 Wing = ACMainWing(1)
-Wing.b       = 132 *IN
+Wing.b       = 131.5 *IN
 #Wing.V_Stall = 32.5* FT/SEC
-Wing.S       = 3168*IN**2
+Wing.S       = 2966*IN**2
 Wing.Lift_LO = 60*LBF
 Wing.Alt_LO  = 653 * FT
 Wing.V_LOstall    =  1.1
@@ -31,7 +31,7 @@ Wing.FullWing = True
  #b=150,S=3200
 #===============================================================================
 Wing.TR      = [1.0,0.7] #Taper Ratio
-Wing.Fb      = [0.99999,1.0] #Span Fraction
+Wing.Fb      = [0.598,1.0] #Span Fraction
 #Wing.TR      = [1.0,0.4] #Max L/D
 #Wing.Fb      = [0.467,1] #Max L/D
 #Wing.TR      = [1.0,0.2] #Max CL
@@ -46,7 +46,7 @@ Wing.Gam     = [ 0*ARCDEG,0*ARCDEG]
 Wing.Lam     = [ 0*ARCDEG,0*ARCDEG]
 
 #Wing.SweepFc = 0.5
-#Wing.CEdge   = 'LE' #LE of wing to be tapered or constant LE
+Wing.CEdge   = 'LE' #LE of wing to be tapered or constant LE
 Wing.ConstUpper = False
 
 #
@@ -101,8 +101,8 @@ Wing.CmSlopeAt = (0*ARCDEG, 15*ARCDEG)
 # Define the control surfaces
 #
 Wing.AddControl('Aileron')
-Wing.Aileron.Fc = 0.250
-Wing.Aileron.Fb = 1-0.66 #Adjusted to make Aileron begin at a Wing rib
+Wing.Aileron.Fc = 0.25
+Wing.Aileron.Fb = 1-0.6 #Adjusted to make Aileron begin at a Wing rib
 Wing.Aileron.Ft = 0.0   #Adjusted to make Aileron end at a Wing rib
 Wing.Aileron.SgnDup = -1.
 Wing.Aileron.Weight = 0.01*LBF
@@ -138,7 +138,7 @@ Wing.WingWeight.MainSpar.ScaleToWing = [False, False]
 Wing.WingWeight.MainSpar.WeightGroup = "MainWing"
 Wing.WingWeight.SkinMat = Ultracote.copy()
 
-Wing.WingWeight.AddSpar("SecondSpar", 0.6*IN, 0.6*IN, (0.66,-0.01),0.25, False)
+Wing.WingWeight.AddSpar("SecondSpar", 0.6*IN, 0.6*IN, (0.66,-0.01),0.33, False)
 Wing.WingWeight.SecondSpar.SparMat = CarbonTube.copy()
 Wing.WingWeight.SecondSpar.ScaleToWing = [False, False]
 Wing.WingWeight.SecondSpar.WeightGroup = "MainWing"
@@ -148,7 +148,7 @@ Wing.WingWeight.SecondSpar.WeightGroup = "MainWing"
 #Wing.WingWeight.ThirdSpar.ScaleToWing = [False, False]
 #Wing.WingWeight.ThirdSpar.WeightGroup = "MainWing"
 
-Wing.WingWeight.AddSpar("TrailingEdge", 1/4*IN, 1*IN, (0.975,0.0), 0.66, False)
+Wing.WingWeight.AddSpar("TrailingEdge", 1/4*IN, 1*IN, (0.975,0.0), 0.6, False)
 Wing.WingWeight.TrailingEdge.SparMat = Balsa.copy()
 Wing.WingWeight.TrailingEdge.ScaleToWing = [False, False]
 Wing.WingWeight.TrailingEdge.WeightGroup = "MainWing"
@@ -189,7 +189,7 @@ BWRibMat = Balsa.copy()
 BWRibMat.Thickness = .25*IN
 
 Wing.WingWeight.RibMat   = BWRibMat
-Wing.WingWeight.RibSpace = 6*IN
+Wing.WingWeight.RibSpace = 6.04*IN
 
 #Wing.SetWeightCalc(ACSolidWing)
 #Wing.WingWeight.SparMat.LinearForceDensity = 0.0051*LBF/IN

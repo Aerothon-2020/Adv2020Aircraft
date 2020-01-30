@@ -2,9 +2,9 @@ from Aerothon.ACAirfoil import ACAirfoil
 
 import pylab as pyl
 
-Airfoils = ["S1223_TC", "E423_B", "S1223"]  # Main wing
+#Airfoils = ["S1223_TC", "E423_B"]  # Main wing
 
-# Airfoils = ["NACA2408","E169"]#Horz tail
+Airfoils = ["NACA2408","E169","NACA0012"]#Horz tail
 
 # Airfoils = ["NACA0010","NACA0012","NACA0015"]#vert tail
 
@@ -12,7 +12,7 @@ Airfoils = ["S1223_TC", "E423_B", "S1223"]  # Main wing
 for AirfoilName in Airfoils:
     Airfoil = ACAirfoil(AirfoilName)
 
-    Airfoil.PlotReportPolars(fig=1, Re=413946)  # main wing
+    Airfoil.PlotReportPolars(fig=1, Re=300000)  # main wing
 
     # Airfoil.PlotReportPolars(fig=1, Re=174000)#tail horz and vert
 
